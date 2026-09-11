@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOKI-LOGISTIEK | Modern Logistics & Freight Forwarding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hoki-orange': '#FF5722',
+            'hoki-orange-hover': '#E04818',
+            'hoki-brown': '#2B1B17',
+            'hoki-dark': '#1A1A1A',
+            'hoki-light': '#F8F9FA'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-hoki-dark antialiased">
+
+  <!-- TOP UTILITY BAR -->
+  <div class="bg-hoki-dark text-gray-300 text-xs py-2 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex gap-6">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-hoki-orange" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          +31 (0)10 123 4567
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-hoki-orange" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+          info@hoki-logistiek.nl
+        </span>
+      </div>
+      <div>Rotterdam Port Logistics Hub</div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-black tracking-tight text-hoki-dark">
+        HOKI<span class="text-hoki-orange">-LOGISTIEK</span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-700">
+        <a href="#" class="text-hoki-orange font-semibold">Home</a>
+        <a href="#" class="hover:text-hoki-orange transition-colors">Over Ons</a>
+        <a href="#" class="hover:text-hoki-orange transition-colors">Diensten</a>
+        <a href="#" class="hover:text-hoki-orange transition-colors">Verscheping</a>
+        <a href="#" class="hover:text-hoki-orange transition-colors">Blog</a>
+        <a href="#" class="hover:text-hoki-orange transition-colors">Contact</a>
+      </nav>
+      <a href="#quote" class="bg-hoki-orange hover:bg-hoki-orange-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-md shadow-orange-500/20">
+        Offerte aanvragen
+      </a>
+    </div>
+  </header>
+
+<!-- HERO SECTION WITH ANIMATED MAP & FREIGHT GLOW LINES -->
+<!-- HERO SECTION WITH HIGH-DETAIL SILHOUETTE MAP & ANIMATED FREIGHT LINES -->
+<section class="relative bg-[#FAFBFD] py-16 md:py-24 px-6 overflow-hidden">
+  
+  <!-- CSS Animations for Shipping Routes & Pulse -->
+  <style>
+    @keyframes dashFlow {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    
+    @keyframes hubPulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.6); opacity: 0.3; }
+    }
+
+    .animated-freight-line {
+      stroke-dasharray: 6, 10;
+      animation: dashFlow 4s linear infinite;
+    }
+
+    .hub-glow {
+      transform-origin: center;
+      animation: hubPulse 2.5s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- BACKGROUND: Detailed Silhouette Map with Cities & Animated Routes -->
+  <div class="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden">
+    <svg class="w-full h-full min-w-[1200px] max-w-[1500px] opacity-80" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      
+      <!-- CONTINENT SILHOUETTE SHAPES (Soft Gray Map Overlay) -->
+      <g fill="#E2E8F0">
+        <!-- North America -->
+        <path d="M 120,120 C 180,90 280,100 320,160 C 350,210 290,260 220,270 C 160,280 100,210 120,120 Z" opacity="0.6"/>
+        <path d="M 80,80 C 120,60 160,70 150,110 C 120,120 90,100 80,80 Z" opacity="0.4"/>
+        
+        <!-- South America -->
+        <path d="M 280,310 C 340,300 390,360 360,450 C 330,510 270,520 250,440 C 240,380 250,330 280,310 Z" opacity="0.5"/>
+        
+        <!-- Europe -->
+        <path d="M 500,110 C 560,90 620,110 610,170 C 570,200 520,180 490,150 C 480,130 490,115 500,110 Z" opacity="0.65"/>
+        
+        <!-- Africa -->
+        <path d="M 520,210 C 600,200 660,260 630,370 C 600,430 540,420 510,350 C 490,290 490,230 520,210 Z" opacity="0.55"/>
+        
+        <!-- Asia -->
+        <path d="M 640,100 C 780,70 940,110 920,230 C 880,300 760,310 680,240 C 630,200 610,130 640,100 Z" opacity="0.6"/>
+        
+        <!-- Southeast Asia / Australia -->
+        <path d="M 820,320 C 880,310 920,340 890,380 C 850,400 810,370 820,320 Z" opacity="0.5"/>
+        <path d="M 840,410 C 940,390 990,450 960,530 C 900,560 830,520 840,410 Z" opacity="0.55"/>
+      </g>
+
+      <!-- STATIC GUIDELINE ARCS BETWEEN PORTS -->
+      <g stroke="#CBD5E1" stroke-width="1.5" stroke-linecap="round" fill="none">
+        <!-- New York to Rotterdam -->
+        <path d="M 260 210 Q 380 130 530 145" stroke-dasharray="3 3"/>
+        <!-- Rotterdam to Istanbul -> Dubai -->
+        <path d="M 530 145 Q 610 150 640 185 T 740 250"/>
+        <!-- Dubai to Singapore -> Shanghai -->
+        <path d="M 740 250 Q 820 310 850 340 T 920 220" stroke-dasharray="3 3"/>
+      </g>
+
+      <!-- ANIMATED GLOWING FREIGHT LINES (Orange / Amber Active Routes) -->
+      <!-- Primary Freight Route: Rotterdam -> Istanbul -> Dubai -->
+      <path d="M 530 145 Q 610 150 640 185 T 740 250" 
+            class="animated-freight-line" 
+            stroke="#FF5722" 
+            stroke-width="2.5" 
+            fill="none" 
+            stroke-linecap="round" 
+            style="filter: drop-shadow(0px 0px 5px rgba(255, 87, 34, 0.7));" />
+
+      <!-- Secondary Express Route: Rotterdam -> Dubai Direct -->
+      <path d="M 530 145 Q 660 170 740 250" 
+            class="animated-freight-line" 
+            stroke="#F59E0B" 
+            stroke-width="2" 
+            fill="none" 
+            stroke-linecap="round" 
+            style="animation-duration: 2.5s; filter: drop-shadow(0px 0px 4px rgba(245, 158, 11, 0.6));" />
+
+      <!-- WORLD CITY LABELS & PORT NODES -->
+      <!-- ROTTERDAM (Main Hub) -->
+      <g transform="translate(530, 145)">
+        <circle cx="0" cy="0" r="9" fill="#FF5722" class="hub-glow" />
+        <circle cx="0" cy="0" r="4" fill="#FF5722" />
+        <circle cx="0" cy="0" r="2" fill="#FFFFFF" />
+        <text x="-35" y="-14" fill="#0F172A" font-size="11" font-weight="800" letter-spacing="0.5">ROTTERDAM</text>
+      </g>
+
+      <!-- NEW YORK -->
+      <g transform="translate(260, 210)">
+        <circle cx="0" cy="0" r="3" fill="#94A3B8" />
+        <text x="-25" y="16" fill="#94A3B8" font-size="9" font-weight="700" letter-spacing="0.5">NEW YORK</text>
+      </g>
+
+      <!-- LONDON -->
+      <g transform="translate(505, 130)">
+        <circle cx="0" cy="0" r="3" fill="#94A3B8" />
+        <text x="-20" y="-10" fill="#94A3B8" font-size="9" font-weight="700">LONDON</text>
+      </g>
+
+      <!-- ISTANBUL -->
+      <g transform="translate(640, 185)">
+        <circle cx="0" cy="0" r="4" fill="#F59E0B" />
+        <text x="10" y="3" fill="#64748B" font-size="9" font-weight="700">ISTANBUL</text>
+      </g>
+
+      <!-- DUBAI -->
+      <g transform="translate(740, 250)">
+        <circle cx="0" cy="0" r="7" fill="#FF5722" class="hub-glow" />
+        <circle cx="0" cy="0" r="3.5" fill="#FF5722" />
+        <text x="12" y="4" fill="#0F172A" font-size="10" font-weight="800">DUBAI</text>
+      </g>
+
+      <!-- MUMBAI -->
+      <g transform="translate(780, 280)">
+        <circle cx="0" cy="0" r="3" fill="#94A3B8" />
+        <text x="-18" y="15" fill="#94A3B8" font-size="9" font-weight="700">MUMBAI</text>
+      </g>
+
+      <!-- SINGAPORE -->
+      <g transform="translate(850, 340)">
+        <circle cx="0" cy="0" r="3" fill="#94A3B8" />
+        <text x="-22" y="15" fill="#94A3B8" font-size="9" font-weight="700">SINGAPORE</text>
+      </g>
+
+      <!-- SHANGHAI -->
+      <g transform="translate(920, 220)">
+        <circle cx="0" cy="0" r="3" fill="#94A3B8" />
+        <text x="8" y="3" fill="#94A3B8" font-size="9" font-weight="700">SHANGHAI</text>
+      </g>
+
+      <!-- SYDNEY -->
+      <g transform="translate(960, 480)">
+        <circle cx="0" cy="0" r="3" fill="#94A3B8" />
+        <text x="-18" y="15" fill="#94A3B8" font-size="9" font-weight="700">SYDNEY</text>
+      </g>
+
+    </svg>
+  </div>
+
+  <!-- FOREGROUND HERO CONTENT -->
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10">
+    
+    <!-- Left Column: Content & Call to Actions -->
+    <div class="lg:col-span-6 space-y-6">
+      
+      <!-- Subtitle Indicator -->
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-[2px] bg-hoki-orange"></span>
+        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">HOKI LOGISTIEK</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-[#0F172A] leading-[1.15] tracking-tight">
+        Meer dan logistiek, <br class="hidden sm:inline" />
+        <span class="text-hoki-orange">uw expediteur</span> <br class="hidden sm:inline" />
+        Rotterdam
+      </h1>
+
+      <!-- Description -->
+      <p class="text-gray-500 text-base sm:text-lg max-w-lg leading-relaxed">
+        HOKI Logistiek is uw onafhankelijke expediteur Rotterdam voor zeevracht, wegtransport en luchtvracht wereldwijd.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="#quote" class="inline-flex items-center gap-2 bg-hoki-orange hover:bg-hoki-orange-hover text-white font-semibold text-sm px-6 py-3.5 rounded-lg transition-all shadow-lg shadow-orange-500/20">
+          Tarief aanvragen 
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="#about" class="inline-flex items-center bg-white hover:bg-gray-50 text-[#0F172A] font-semibold text-sm px-6 py-3.5 rounded-lg border border-gray-300 transition-all shadow-sm">
+          Over ons
+        </a>
+      </div>
+
+      <!-- Features Row -->
+      <div class="pt-6 border-t border-gray-200/60 grid grid-cols-3 gap-4 text-xs font-medium text-gray-600">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-orange-50 text-hoki-orange flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span>Binnen 24 uur</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-orange-50 text-hoki-orange flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <span>50+ landen</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-orange-50 text-hoki-orange flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <span>Onafhankelijk</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Container with Floating UI Badges -->
+    <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+      
+      <!-- Main Visual Container -->
+      <div class="relative w-full max-w-lg lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-900 aspect-[4/3]">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80" alt="Rotterdam Harbor Container Ship" class="w-full h-full object-cover object-center" />
+        
+        <!-- Bottom-Left Truck Icon Badge -->
+        <div class="absolute bottom-4 left-4 bg-[#0F2338] text-white p-3 rounded-2xl shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Top-Left Floating Badge: 24u Snelle levering -->
+      <div class="absolute -top-4 left-4 sm:left-8 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <p class="text-sm font-extrabold text-gray-900 leading-none">24u</p>
+          <p class="text-[10px] text-gray-500 font-medium">Snelle levering</p>
+        </div>
+      </div>
+
+      <!-- Middle-Right Floating Badge: ROTTERDAM — GLOBAL -->
+      <div class="absolute top-1/2 -right-2 sm:-right-4 transform -translate-y-1/2 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-full shadow-lg border border-gray-100 flex items-center gap-2 text-xs font-semibold text-gray-700">
+        <svg class="w-3.5 h-3.5 text-hoki-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+        <span class="tracking-wider">ROTTERDAM</span>
+        <span class="text-gray-300">—</span>
+        <span class="text-gray-400">GLOBAL</span>
+        <span class="w-2 h-2 rounded-full bg-hoki-orange inline-block"></span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="mt-12 flex flex-col items-center justify-center text-center">
+    <span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">SCROLL</span>
+    <svg class="w-4 h-4 text-hoki-orange animate-bounce mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+  </div>
+</section>
+
+<!-- SECTION 2: ABOUT US / OVER ONS -->
+<section id="about" class="py-20 px-6 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    
+    <!-- LEFT COLUMN: IMAGE COLLAGE & FLOATING BADGES -->
+    <div class="lg:col-span-6 relative">
+      
+      <!-- MAIN CONTAINER CARD -->
+      <div class="relative bg-gray-50 p-3 sm:p-4 rounded-[2.5rem] border border-gray-100 shadow-xl">
+        
+        <!-- Main Large Image -->
+        <div class="relative rounded-[2rem] overflow-hidden aspect-[4/3] bg-gray-900 shadow-md">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80" 
+               alt="HOKI Logistiek Truck Fleet" 
+               class="w-full h-full object-cover object-center" />
+          
+          <!-- Top Right Badge: Sinds 2019 -->
+          <div class="absolute top-4 right-4 bg-[#0F172A] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg border border-white/10 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Sinds 2019</span>
+          </div>
+
+          <!-- Bottom Label: HOKI — expediteur Rotterdam -->
+          <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-lg border border-gray-100/80 flex items-center gap-2 text-xs font-bold text-gray-900">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <span>HOKI-LOGISTIEK — expediteur Rotterdam</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- OVERLAY SMALL IMAGE 1 (Top Left Floating Card) -->
+      <div class="absolute -top-6 -left-4 sm:-left-8 w-44 sm:w-52 rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-white transform -rotate-3 hover:rotate-0 transition-transform duration-300 hidden sm:block">
+        <div class="relative aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" 
+               alt="Logistics Operations" 
+               class="w-full h-full object-cover" />
+        </div>
+        <!-- Small Badge inside Image 1 -->
+        <div class="p-2 bg-white flex items-center gap-1.5 text-[10px] font-bold text-gray-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+          <span>Betrouwbare partner</span>
+        </div>
+      </div>
+
+      <!-- OVERLAY SMALL IMAGE 2 (Bottom Left Floating Card) -->
+      <div class="absolute -bottom-8 -left-2 sm:-left-6 w-36 sm:w-44 rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-white transform rotate-2 hover:rotate-0 transition-transform duration-300 hidden sm:block">
+        <div class="aspect-[4/5]">
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" 
+               alt="Warehouse Staff" 
+               class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- FLOATING STAT BADGE (Bottom Right: 50+ Landen) -->
+      <div class="absolute -bottom-6 right-4 sm:right-8 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-white flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+        </div>
+        <div>
+          <p class="text-lg font-extrabold text-gray-900 leading-none">50+</p>
+          <p class="text-xs text-gray-500 font-medium mt-0.5">Landen bereikt</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: CONTENT & ADVANTAGES LIST -->
+    <div class="lg:col-span-6 space-y-6 pt-6 lg:pt-0">
+      
+      <!-- Subtitle Badge -->
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-[2px] bg-orange-500"></span>
+        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">OVER ONS</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+        Onafhankelijk expediteur Rotterdam met wereldwijd bereik
+      </h2>
+
+      <!-- Description Paragraphs -->
+      <div class="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+        <p>
+          HOKI Logistiek biedt maatwerkoplossingen voor diverse bedrijven en handelaren uit uiteenlopende industrieën wereldwijd. Onze diepgaande kennis, expertise en uitgebreid internationaal netwerk van professionele logistieke partners maken het mogelijk om aangepaste oplossingen te leveren voor alle transportbehoeften.
+        </p>
+        <p>
+          Wij zorgen dat goederen tijdig en in onberispelijke staat op hun bestemming arriveren — via wegtransport, luchtvracht, spoorvervoer of zeevervoer.
+        </p>
+      </div>
+
+      <!-- Bullet Points List -->
+      <div class="grid sm:grid-cols-2 gap-3 pt-2">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <span class="text-xs sm:text-sm font-semibold text-gray-800">Internationaal netwerk van partners</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <span class="text-xs sm:text-sm font-semibold text-gray-800">Transport binnen 24 uur mogelijk</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <span class="text-xs sm:text-sm font-semibold text-gray-800">Maatwerkoplossingen per klant</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <span class="text-xs sm:text-sm font-semibold text-gray-800">Alle modaliteiten: zee, lucht, weg, spoor</span>
+        </div>
+
+      </div>
+
+      <!-- Action Button -->
+      <div class="pt-4">
+        <a href="#about-more" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm px-7 py-3.5 rounded-xl transition-all shadow-md shadow-orange-500/20">
+          Meer over ons
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 3: SERVICES / WHAT WE DO -->
+<section id="services" class="relative py-20 px-6 bg-[#F8FAFC] overflow-hidden">
+  
+  <!-- LEFT FULL-HEIGHT CONTAINER BACKGROUND -->
+  <div class="absolute inset-y-0 left-0 w-full lg:w-5/12 pointer-events-none z-0">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" 
+         alt="Shipping Containers Background" 
+         class="w-full h-full object-cover object-left opacity-20 mix-blend-multiply filter contrast-125" />
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#F8FAFC]/80 to-[#F8FAFC]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- SECTION HEADER -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+      <div class="flex items-center justify-center gap-2 text-xs font-bold text-orange-500 tracking-widest uppercase">
+        <span class="w-4 h-[2px] bg-orange-400 inline-block"></span>
+        <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1"/>
+        </svg>
+        <span>WHAT WE DO</span>
+        <span class="w-4 h-[2px] bg-orange-400 inline-block"></span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0F172A] tracking-tight">
+        Our <span class="text-orange-500">logistics</span> services
+      </h2>
+
+      <p class="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed">
+        We offer our clients a full range of logistics services, from self-service to full end-to-end solutions and flexibility, and we build strong partnerships to ensure your cargo reaches its destination safely and on time.
+      </p>
+    </div>
+
+    <!-- SERVICES CARDS GRID (overflow-visible لتسمح ببروز الشاحنة للخارج) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      
+      <!-- CARD 1: Customs Clearance -->
+      <div class="group relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col justify-between min-h-[230px] overflow-visible">
+        
+        <!-- Background Diagonal Graphics & Truck 12.png (نصفها داخل الكرت ونصفها خارجه) -->
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none rounded-r-3xl overflow-hidden">
+          <div class="absolute -right-6 top-0 bottom-0 w-32 bg-orange-500/10 transform skew-x-[-25deg]"></div>
+          <div class="absolute -right-2 top-0 bottom-0 w-16 bg-orange-500 transform skew-x-[-25deg] opacity-80"></div>
+        </div>
+
+        <!-- صورة الشاحنة بارزة للخارج ومقصوصة من اليمين -->
+        <div class="absolute -right-10 bottom-2 w-56 h-36 pointer-events-none z-20 overflow-hidden">
+          <img src="12.png" 
+               alt="Truck" 
+               class="w-full h-full object-cover object-left transform group-hover:scale-105 group-hover:-translate-x-1 transition-all duration-300 drop-shadow-md" />
+        </div>
+
+        <div class="relative z-10 w-7/12 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-orange-400 flex items-center justify-center shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-[#0F172A]">Customs Clearance</h3>
+          <p class="text-[11px] text-gray-500 leading-normal">
+            Full container load (FCL) and less than container load (LCL) shipments via our established network of shipping partners.
+          </p>
+        </div>
+
+        <div class="relative z-10 pt-4">
+          <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-orange-600 transition-colors">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 2: Freight Transport -->
+      <div class="group relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col justify-between min-h-[230px] overflow-visible">
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none rounded-r-3xl overflow-hidden">
+          <div class="absolute -right-6 top-0 bottom-0 w-32 bg-orange-500/10 transform skew-x-[-25deg]"></div>
+          <div class="absolute -right-2 top-0 bottom-0 w-16 bg-orange-500 transform skew-x-[-25deg] opacity-80"></div>
+        </div>
+
+        <div class="absolute -right-10 bottom-2 w-56 h-36 pointer-events-none z-20 overflow-hidden">
+          <img src="12.png" 
+               alt="Truck" 
+               class="w-full h-full object-cover object-left transform group-hover:scale-105 group-hover:-translate-x-1 transition-all duration-300 drop-shadow-md" />
+        </div>
+
+        <div class="relative z-10 w-7/12 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-orange-400 flex items-center justify-center shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-[#0F172A]">Freight Transport</h3>
+          <p class="text-[11px] text-gray-500 leading-normal">
+            National and international freight transport by road across Europe. Flexible solutions for all types of cargo and volume.
+          </p>
+        </div>
+
+        <div class="relative z-10 pt-4">
+          <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-orange-600 transition-colors">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 3: Air Freight -->
+      <div class="group relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col justify-between min-h-[230px] overflow-visible">
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none rounded-r-3xl overflow-hidden">
+          <div class="absolute -right-6 top-0 bottom-0 w-32 bg-orange-500/10 transform skew-x-[-25deg]"></div>
+          <div class="absolute -right-2 top-0 bottom-0 w-16 bg-orange-500 transform skew-x-[-25deg] opacity-80"></div>
+        </div>
+
+        <div class="absolute -right-10 bottom-2 w-56 h-36 pointer-events-none z-20 overflow-hidden">
+          <img src="12.png" 
+               alt="Truck" 
+               class="w-full h-full object-cover object-left transform group-hover:scale-105 group-hover:-translate-x-1 transition-all duration-300 drop-shadow-md" />
+        </div>
+
+        <div class="relative z-10 w-7/12 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-orange-400 flex items-center justify-center shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-[#0F172A]">Air Freight</h3>
+          <p class="text-[11px] text-gray-500 leading-normal">
+            Fast and reliable global air freight solutions. Ideal for time-critical and high-value shipments.
+          </p>
+        </div>
+
+        <div class="relative z-10 pt-4">
+          <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-orange-600 transition-colors">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 4: Container Trucking -->
+      <div class="group relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col justify-between min-h-[230px] overflow-visible">
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none rounded-r-3xl overflow-hidden">
+          <div class="absolute -right-6 top-0 bottom-0 w-32 bg-orange-500/10 transform skew-x-[-25deg]"></div>
+          <div class="absolute -right-2 top-0 bottom-0 w-16 bg-orange-500 transform skew-x-[-25deg] opacity-80"></div>
+        </div>
+
+        <div class="absolute -right-10 bottom-2 w-56 h-36 pointer-events-none z-20 overflow-hidden">
+          <img src="12.png" 
+               alt="Truck" 
+               class="w-full h-full object-cover object-left transform group-hover:scale-105 group-hover:-translate-x-1 transition-all duration-300 drop-shadow-md" />
+        </div>
+
+        <div class="relative z-10 w-7/12 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-orange-400 flex items-center justify-center shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-[#0F172A]">Container Trucking</h3>
+          <p class="text-[11px] text-gray-500 leading-normal">
+            Efficient container transport between ports, terminals and your warehouse. Seamless handling in the port of Rotterdam.
+          </p>
+        </div>
+
+        <div class="relative z-10 pt-4">
+          <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-orange-600 transition-colors">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 5: Documentation -->
+      <div class="group relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col justify-between min-h-[230px] overflow-visible">
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none rounded-r-3xl overflow-hidden">
+          <div class="absolute -right-6 top-0 bottom-0 w-32 bg-orange-500/10 transform skew-x-[-25deg]"></div>
+          <div class="absolute -right-2 top-0 bottom-0 w-16 bg-orange-500 transform skew-x-[-25deg] opacity-80"></div>
+        </div>
+
+        <div class="absolute -right-10 bottom-2 w-56 h-36 pointer-events-none z-20 overflow-hidden">
+          <img src="12.png" 
+               alt="Truck" 
+               class="w-full h-full object-cover object-left transform group-hover:scale-105 group-hover:-translate-x-1 transition-all duration-300 drop-shadow-md" />
+        </div>
+
+        <div class="relative z-10 w-7/12 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-orange-400 flex items-center justify-center shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-[#0F172A]">Documentation</h3>
+          <p class="text-[11px] text-gray-500 leading-normal">
+            Complete customs and document handling. We take care of everything so you can focus on your business.
+          </p>
+        </div>
+
+        <div class="relative z-10 pt-4">
+          <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-orange-600 transition-colors">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 6: Warehousing -->
+      <div class="group relative bg-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col justify-between min-h-[230px] overflow-visible">
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none rounded-r-3xl overflow-hidden">
+          <div class="absolute -right-6 top-0 bottom-0 w-32 bg-orange-500/10 transform skew-x-[-25deg]"></div>
+          <div class="absolute -right-2 top-0 bottom-0 w-16 bg-orange-500 transform skew-x-[-25deg] opacity-80"></div>
+        </div>
+
+        <div class="absolute -right-10 bottom-2 w-56 h-36 pointer-events-none z-20 overflow-hidden">
+          <img src="12.png" 
+               alt="Truck" 
+               class="w-full h-full object-cover object-left transform group-hover:scale-105 group-hover:-translate-x-1 transition-all duration-300 drop-shadow-md" />
+        </div>
+
+        <div class="relative z-10 w-7/12 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-[#0F172A] text-orange-400 flex items-center justify-center shadow-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-[#0F172A]">Warehousing</h3>
+          <p class="text-[11px] text-gray-500 leading-normal">
+            Flexible storage solutions with forwarding and distribution services. Strategically located in Rotterdam.
+          </p>
+        </div>
+
+        <div class="relative z-10 pt-4">
+          <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:text-orange-600 transition-colors">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM RIGHT DIAGONAL STRIPES -->
+  <div class="absolute bottom-0 right-0 pointer-events-none flex gap-2 p-4 z-10">
+    <div class="w-4 h-24 bg-orange-500 rounded-full transform rotate-45 translate-y-6"></div>
+    <div class="w-4 h-24 bg-amber-700/60 rounded-full transform rotate-45 translate-y-6"></div>
+  </div>
+</section>
+
+
+  <!-- FEATURED MEDIA SECTION (DARK BROWN CONTRAST) -->
+  <section class="bg-hoki-brown text-white py-20 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+      <div class="md:col-span-2 relative bg-black/40 rounded-2xl overflow-hidden aspect-video border border-white/10 flex items-center justify-center group cursor-pointer">
+        <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="relative z-10 w-20 h-20 bg-hoki-orange rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+          <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+        </div>
+        <div class="absolute bottom-6 left-6 bg-hoki-brown/90 backdrop-blur-md px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider text-hoki-orange">
+          2.000 Containers Per Jaar
+        </div>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-6 text-white">Bekijk onze laatste video's</h3>
+        <ul class="space-y-4">
+          <li class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-hoki-orange transition-colors cursor-pointer">
+            <p class="text-xs text-hoki-orange font-semibold mb-1">Podcast Aflevering 04</p>
+            <p class="text-sm font-medium">Hoe wij zeevracht efficient beheren in Rotterdam</p>
+          </li>
+          <li class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-hoki-orange transition-colors cursor-pointer">
+            <p class="text-xs text-hoki-orange font-semibold mb-1">Bedrijfsvideo</p>
+            <p class="text-sm font-medium">Achter de schermen bij HOKI-LOGISTIEK</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<style>
+  /* أنيميشن شعاع الـ LED للخط الزمني */
+  @keyframes lineBeam {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  .led-beam {
+    position: absolute;
+    width: 6px;
+    height: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, transparent, #f97316, #ffedd5, transparent);
+    border-radius: 9999px;
+    box-shadow: 0 0 12px #f97316, 0 0 22px #f97316;
+    animation: lineBeam 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+</style>
+
+<!-- SECTION: TIMELINE / HOW IT WORKS -->
+<section id="how-it-works" class="relative py-24 px-6 bg-white overflow-hidden">
+
+  <!-- RIGHT FULL-HEIGHT CONTAINER BACKGROUND (بنفس طريقة قسم الخدمات تماماً) -->
+  <div class="absolute inset-y-0 right-0 w-full lg:w-7/12 pointer-events-none z-0">
+    <img src="12.png" 
+         alt="Background Truck" 
+         class="w-full h-full object-cover object-right opacity-30 mix-blend-multiply filter contrast-125" />
+    <!-- Gradient Fade ناعم جداً من اليسار (أبيض) إلى اليمين (شفاف) كي تظهر الشاحنة بوضوح -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+
+    <!-- HEADER SECTION -->
+    <div class="text-center max-w-2xl mx-auto space-y-3 mb-20">
+      <div class="flex items-center justify-center gap-2 text-xs font-bold text-hoki-orange tracking-widest uppercase">
+        <span class="w-4 h-[2px] bg-orange-400 inline-block"></span>
+        <svg class="w-4 h-4 text-hoki-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        <span>HOE HET WERKT</span>
+        <span class="w-4 h-[2px] bg-orange-400 inline-block"></span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-black text-hoki-dark tracking-tight">
+        Van aanvraag tot aflevering
+      </h2>
+
+      <p class="text-gray-500 text-xs sm:text-sm md:text-base leading-relaxed">
+        Ons gestroomlijnd proces zorgt ervoor dat uw zending snel, veilig en transparant wordt afgehandeld.
+      </p>
+    </div>
+
+    <!-- TIMELINE WRAPPER -->
+    <div class="relative">
+
+      <!-- VERTICAL TIMELINE LINE WITH ANIMATED LED BEAM -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 top-8 bottom-12 w-[3px] bg-orange-200/80 rounded-full z-0">
+        <div class="led-beam"></div>
+      </div>
+
+      <!-- START BADGE -->
+      <div class="relative z-10 flex justify-center mb-12">
+        <div class="flex items-center gap-2 bg-hoki-dark text-white text-[11px] font-bold px-4 py-2 rounded-full shadow-lg border border-hoki-orange/30">
+          <span class="w-2.5 h-2.5 rounded-full bg-hoki-orange animate-pulse"></span>
+          <span class="tracking-wider uppercase">VERTREKPUNT</span>
+        </div>
+      </div>
+
+      <!-- STEP CARDS -->
+      <div class="space-y-12 md:space-y-16">
+
+        <!-- STEP 1 (Right Side Card) -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between group">
+          <div class="w-full md:w-[45%] hidden md:block"></div>
+          
+          <div class="absolute left-1/2 transform -translate-x-1/2 z-20 w-9 h-9 rounded-full bg-hoki-orange text-white font-bold text-xs flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-white group-hover:scale-110 transition-transform duration-300">
+            1
+          </div>
+
+          <div class="w-full md:w-[45%] md:pl-6 pl-0">
+            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 relative group-hover:-translate-y-1">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-hoki-dark text-hoki-orange flex items-center justify-center shrink-0 shadow-md">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-hoki-orange tracking-widest uppercase">STAP 1</span>
+                  <h3 class="text-base font-bold text-hoki-dark">Aanvraag & advies</h3>
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    U neemt contact op. Wij analyseren uw transportbehoefte en adviseren de beste oplossing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 (Left Side Card) -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between group">
+          <div class="w-full md:w-[45%] md:pr-6 pr-0">
+            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 relative group-hover:-translate-y-1">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-hoki-dark text-hoki-orange flex items-center justify-center shrink-0 shadow-md">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-hoki-orange tracking-widest uppercase">STAP 2</span>
+                  <h3 class="text-base font-bold text-hoki-dark">Planning & coördinatie</h3>
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Wij regelen de volledige logistiek: boekingen, documentatie en planning tot in detail.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute left-1/2 transform -translate-x-1/2 z-20 w-9 h-9 rounded-full bg-hoki-orange text-white font-bold text-xs flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-white group-hover:scale-110 transition-transform duration-300">
+            2
+          </div>
+
+          <div class="w-full md:w-[45%] hidden md:block"></div>
+        </div>
+
+        <!-- STEP 3 (Right Side Card) -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between group">
+          <div class="w-full md:w-[45%] hidden md:block"></div>
+
+          <div class="absolute left-1/2 transform -translate-x-1/2 z-20 w-9 h-9 rounded-full bg-hoki-orange text-white font-bold text-xs flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-white group-hover:scale-110 transition-transform duration-300">
+            3
+          </div>
+
+          <div class="w-full md:w-[45%] md:pl-6 pl-0">
+            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 relative group-hover:-translate-y-1">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-hoki-dark text-hoki-orange flex items-center justify-center shrink-0 shadow-md">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-hoki-orange tracking-widest uppercase">STAP 3</span>
+                  <h3 class="text-base font-bold text-hoki-dark">Transport & tracking</h3>
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Uw zending is onderweg. U kunt de voortgang volgen via ons tracking systeem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 (Left Side Card) -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between group">
+          <div class="w-full md:w-[45%] md:pr-6 pr-0">
+            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 relative group-hover:-translate-y-1">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-hoki-dark text-hoki-orange flex items-center justify-center shrink-0 shadow-md">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div class="space-y-1">
+                  <span class="text-[10px] font-black text-hoki-orange tracking-widest uppercase">STAP 4</span>
+                  <h3 class="text-base font-bold text-hoki-dark">Aflevering & nazorg</h3>
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Goederen worden afgeleverd in perfecte staat. Wij blijven beschikbaar voor service na levering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute left-1/2 transform -translate-x-1/2 z-20 w-9 h-9 rounded-full bg-hoki-orange text-white font-bold text-xs flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-white group-hover:scale-110 transition-transform duration-300">
+            4
+          </div>
+
+          <div class="w-full md:w-[45%] hidden md:block"></div>
+        </div>
+
+      </div>
+
+      <!-- END BADGE -->
+      <div class="relative z-10 flex justify-center mt-12">
+        <div class="flex items-center gap-2 bg-hoki-orange text-white text-[11px] font-bold px-5 py-2.5 rounded-full shadow-lg shadow-orange-500/30">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+          </svg>
+          <span class="tracking-wider uppercase">BESTEMMING BEREIKT</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM RIGHT DIAGONAL STRIPES -->
+  <div class="absolute bottom-0 right-0 pointer-events-none flex gap-2 p-4 z-10">
+    <div class="w-4 h-24 bg-orange-500 rounded-full transform rotate-45 translate-y-6"></div>
+    <div class="w-4 h-24 bg-amber-700/60 rounded-full transform rotate-45 translate-y-6"></div>
+  </div>
+</section>
+
+<!-- SECTION: CONTACT / LET'S CONNECT -->
+<section id="contact" class="relative py-20 px-6 bg-[#F3F6F9] overflow-hidden min-h-[600px] flex items-center">
+  
+  <!-- BACKGROUND MAP LAYER -->
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-20 mix-blend-multiply">
+    <!-- يمكنك استبدال الرابط برابط صورة خريطة العالم الخاصة بك -->
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2000&auto=format&fit=crop" 
+         alt="World Map Background" 
+         class="w-full h-full object-cover filter grayscale contrast-125" />
+  </div>
+
+  <!-- LIGHT GRID OVERLAY (محاكاة خطوط الشبكة في التصميم) -->
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-30"
+       style="background-image: linear-gradient(#CBD5E1 1px, transparent 1px), linear-gradient(to right, #CBD5E1 1px, transparent 1px); background-size: 80px 80px;">
+  </div>
+
+  <!-- RADIAL GRADIENT OVERLAY (لتنقية الرؤية وجعل النصوص واضحة) -->
+  <div class="absolute inset-0 z-0 pointer-events-none bg-radial from-transparent via-[#F3F6F9]/60 to-[#F3F6F9]"></div>
+
+  <div class="max-w-7xl mx-auto w-full relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- LEFT CONTENT COLUMN -->
+      <div class="lg:col-span-5 space-y-8">
+        
+        <!-- SUBTITLE / TAG -->
+        <div class="space-y-2">
+          <span class="text-[11px] font-mono font-bold tracking-[0.2em] text-orange-500 uppercase">
+            NEEM CONTACT OP
+          </span>
+          
+          <!-- MAIN HEADING -->
+          <h2 class="text-4xl sm:text-5xl font-extrabold text-[#0F172A] leading-[1.15] tracking-tight">
+            Laten we samen <br/>
+            iets <span class="text-orange-500">groots</span> <br/>
+            in beweging zetten.
+          </h2>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <p class="text-gray-500 text-sm leading-relaxed max-w-md">
+          Een nieuwe route, een complexe zending of een efficiëntere manier om uw huidige logistiek te beheren. Vertel ons waar we kunnen beginnen.
+        </p>
+
+        <!-- STATS / NUMBERS BLOCK -->
+        <div class="pt-4 border-t border-gray-200/80 flex items-center gap-12">
+          <div class="space-y-1">
+            <span class="text-2xl font-bold text-orange-500 font-mono">01</span>
+            <p class="text-[11px] text-gray-400 font-mono uppercase tracking-wider">Snelle reactie</p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-2xl font-bold text-orange-500 font-mono">02</span>
+            <p class="text-[11px] text-gray-400 font-mono uppercase tracking-wider">Advies op maat</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM CARD COLUMN -->
+      <div class="lg:col-span-7">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-10 shadow-xl shadow-slate-200/60 border border-white/80 relative">
+          
+          <form class="space-y-6" onsubmit="event.preventDefault();">
+            
+            <!-- ROW 1: FULL NAME & WORK EMAIL -->
+            <div class="grid sm:grid-cols-2 gap-6">
+              
+              <!-- FULL NAME -->
+              <div class="space-y-2">
+                <label class="block text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
+                  VOLLEDIGE NAAM
+                </label>
+                <input type="text" 
+                       placeholder="Uw naam" 
+                       class="w-full bg-[#F8FAFC] border border-gray-200/80 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:bg-white transition-all duration-200" />
+              </div>
+
+              <!-- WORK EMAIL -->
+              <div class="space-y-2">
+                <label class="block text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
+                  ZAKELIJK E-MAILADRES
+                </label>
+                <input type="email" 
+                       placeholder="naam@bedrijf.nl" 
+                       class="w-full bg-[#F8FAFC] border border-gray-200/80 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:bg-white transition-all duration-200" />
+              </div>
+
+            </div>
+
+            <!-- ROW 2: COMPANY & SERVICE SELECT -->
+            <div class="grid sm:grid-cols-2 gap-6">
+              
+              <!-- COMPANY -->
+              <div class="space-y-2">
+                <label class="block text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
+                  BEDRIJFSNAAM
+                </label>
+                <input type="text" 
+                       placeholder="Bedrijfsnaam" 
+                       class="w-full bg-[#F8FAFC] border border-gray-200/80 rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:bg-white transition-all duration-200" />
+              </div>
+
+              <!-- SERVICE SELECT -->
+              <div class="space-y-2">
+                <label class="block text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
+                  WAAR KUNNEN WE BIJ HELPEN?
+                </label>
+                <div class="relative">
+                  <select class="w-full bg-[#F8FAFC] border border-gray-200/80 rounded-xl px-4 py-3.5 text-sm text-gray-500 focus:outline-none focus:border-orange-500 focus:bg-white appearance-none transition-all duration-200 cursor-pointer">
+                    <option value="" disabled selected>Selecteer een dienst</option>
+                    <option value="douane">Douaneafhandeling</option>
+                    <option value="freight">Vrachtvervoer</option>
+                    <option value="luchtvracht">Luchtvracht</option>
+                    <option value="container">Container Transport</option>
+                    <option value="warehousing">Opslag & Warehousing</option>
+                  </select>
+                  <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 3: MESSAGE / DETAILS -->
+            <div class="space-y-2">
+              <label class="block text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
+                VERTELLER ONS MEER
+              </label>
+              <textarea rows="3" 
+                        placeholder="Herkomst, bestemming, planning – wat nuttig is." 
+                        class="w-full bg-[#F8FAFC] border border-gray-200/80 rounded-xl p-4 text-sm text-[#0F172A] placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:bg-white transition-all duration-200 resize-none"></textarea>
+            </div>
+
+            <!-- BOTTOM FOOTER & SUBMIT BUTTON -->
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+              
+              <span class="text-[11px] text-gray-400 font-mono">
+                Meestal antwoord binnen 1 werkdag.
+              </span>
+
+              <button type="submit" 
+                      class="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 active:scale-95">
+                <span>Aanvraag versturen</span>
+                <svg class="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* أنيميشن حركة عائمة ناعمة للبطاقات */
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes floatReverse {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+  }
+
+  .animate-float-1 {
+    animation: floatSlow 6s ease-in-out infinite;
+  }
+
+  .animate-float-2 {
+    animation: floatReverse 7s ease-in-out infinite;
+  }
+
+  .animate-float-3 {
+    animation: floatSlow 5.5s ease-in-out infinite 1s;
+  }
+</style>
+
+<!-- SECTION: TESTIMONIALS / REVIEWS -->
+<section id="reviews" class="relative py-24 px-6 bg-[#F8FAFC] overflow-hidden">
+
+  <!-- BACKGROUND LIGHT PATTERN -->
+  <div class="absolute inset-0 pointer-events-none opacity-20"
+       style="background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 32px 32px;">
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <!-- HEADER SECTION -->
+    <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+      <div class="flex items-center justify-center gap-2 text-[11px] font-mono font-bold text-orange-500 tracking-[0.2em] uppercase">
+        <span class="w-4 h-[2px] bg-orange-500 inline-block"></span>
+        <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+        <span>KLANTEN OVER ONS</span>
+        <span class="w-4 h-[2px] bg-orange-500 inline-block"></span>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-black text-[#0F172A] tracking-tight">
+        Vertrouwd door transportbedrijven in <br/>
+        <span class="text-orange-500">heel Nederland</span>
+      </h2>
+
+      <p class="text-gray-500 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
+        Van wagenparkbeheerders tot zelfstandig chauffeurs, onze klanten waarderen de snelheid, vakkundigheid en betrouwbaarheid van onze diensten.
+      </p>
+    </div>
+
+    <!-- MAIN GRID CONTAINER WITH FLOATING REVIEW CARDS -->
+    <div class="relative min-h-[520px] max-w-5xl mx-auto flex items-center justify-center mb-16">
+
+      <!-- CENTER FEATURED IMAGE CARD -->
+      <div class="relative z-20 w-72 sm:w-80 rounded-3xl overflow-hidden bg-white shadow-2xl shadow-orange-500/10 border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+        <div class="relative h-96 w-full">
+          <img src="12.png" 
+               alt="Logistics Operations" 
+               class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- RATING BADGE OVERLAY -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3 shadow-lg border border-gray-100 flex items-center gap-3 w-[85%] justify-center">
+          <span class="text-2xl font-black text-[#0F172A]">4.9</span>
+          <div class="space-y-0.5 text-left">
+            <div class="flex text-amber-400 text-xs gap-0.5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-[10px] text-gray-400 font-medium">24+ beoordelingen</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM CENTER BADGE ICON -->
+      <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg shadow-orange-500/40 border-2 border-white">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+        </svg>
+      </div>
+
+      <!-- LEFT SIDE FLOATING CARDS -->
+      <!-- CARD 1 (Top Left) -->
+      <div class="absolute left-0 top-4 z-10 w-64 sm:w-72 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-lg border border-gray-100/80 animate-float-1 hidden md:block hover:z-40 hover:scale-105 transition-all duration-300">
+        <div class="flex text-amber-400 text-xs mb-2 gap-0.5">★ ★ ★ ★ ★</div>
+        <p class="text-[11px] text-gray-500 italic leading-relaxed mb-4">
+          "Uitstekende service. Communicatie is duidelijk, afspraken worden stipt nagekomen en alles verloopt soepel."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center">A</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#0F172A]">Ahmet T.</h4>
+            <span class="text-[9px] text-gray-400">Google Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 (Middle Left - Overlapping) -->
+      <div class="absolute left-6 top-36 z-30 w-64 sm:w-72 bg-white p-5 rounded-2xl shadow-xl border border-gray-100/80 animate-float-3 hover:scale-105 transition-all duration-300">
+        <div class="flex text-amber-400 text-xs mb-2 gap-0.5">★ ★ ★ ★ ★</div>
+        <p class="text-[11px] text-gray-600 font-medium italic leading-relaxed mb-4">
+          "Great service, never had any complaint about them!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-500 text-white font-bold text-xs flex items-center justify-center shadow-sm">I</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#0F172A]">Ivana Stoilovska</h4>
+            <span class="text-[9px] text-orange-500 font-semibold">★ Google Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 (Bottom Left) -->
+      <div class="absolute left-12 bottom-2 z-10 w-64 sm:w-72 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-lg border border-gray-100/80 animate-float-2 hidden md:block hover:z-40 hover:scale-105 transition-all duration-300">
+        <p class="text-[11px] text-gray-500 italic leading-relaxed mb-4">
+          "Fijne samenwerking en alles netjes op orde! Veel kennis aanwezig."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center">N</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#0F172A]">Nancy Hoekstra</h4>
+            <span class="text-[9px] text-gray-400">Google Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE FLOATING CARDS -->
+      <!-- CARD 4 (Top Right) -->
+      <div class="absolute right-4 top-8 z-10 w-64 sm:w-72 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-lg border border-gray-100/80 animate-float-2 hidden md:block hover:z-40 hover:scale-105 transition-all duration-300">
+        <div class="flex text-amber-400 text-xs mb-2 gap-0.5">★ ★ ★ ★ ★</div>
+        <p class="text-[11px] text-gray-500 italic leading-relaxed mb-4">
+          "Wij hebben een fijne service gehad. Goed op tijd en hielden zich aan hun afspraak."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center">J</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#0F172A]">Jos De Waal</h4>
+            <span class="text-[9px] text-gray-400">Google Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOATING SHIELD ICON BADGE -->
+      <div class="absolute right-16 top-44 z-20 w-9 h-9 rounded-xl bg-white shadow-md border border-gray-100 flex items-center justify-center text-gray-400 animate-pulse hidden md:flex">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+      </div>
+
+      <!-- CARD 5 (Bottom Right) -->
+      <div class="absolute right-8 bottom-6 z-10 w-64 sm:w-72 bg-white/90 backdrop-blur-md p-5 rounded-2xl shadow-lg border border-gray-100/80 animate-float-1 hidden md:block hover:z-40 hover:scale-105 transition-all duration-300">
+        <div class="flex text-amber-400 text-xs mb-2 gap-0.5">★ ★ ★ ★ ★</div>
+        <p class="text-[11px] text-gray-500 italic leading-relaxed mb-4">
+          "Snelle service, hierdoor is alles in een werkdag geregeld en uitgeladen."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center">S</div>
+          <div>
+            <h4 class="text-xs font-bold text-[#0F172A]">SK</h4>
+            <span class="text-[9px] text-gray-400">Google Review</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM CAROUSEL / RECENT REVIEWS SECTION -->
+    <div class="pt-8 border-t border-gray-200/60 max-w-5xl mx-auto">
+      <p class="text-center text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest mb-6">
+        MEER BEOORDELINGEN
+      </p>
+
+      <!-- CAROUSEL GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        
+        <!-- CARD A -->
+        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3 hover:border-orange-200 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center shrink-0">S</div>
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h5 class="text-xs font-bold text-[#0F172A]">SK</h5>
+              <div class="flex text-amber-400 text-[10px]">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="text-[10px] text-gray-400 line-clamp-1">Snelle service, hierdoor is alles geregeld.</p>
+          </div>
+        </div>
+
+        <!-- CARD B -->
+        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3 hover:border-orange-200 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center shrink-0">I</div>
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h5 class="text-xs font-bold text-[#0F172A]">Ivana Stoilovska</h5>
+              <div class="flex text-amber-400 text-[10px]">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="text-[10px] text-gray-400 line-clamp-1">Great service, never had any complaint!</p>
+          </div>
+        </div>
+
+        <!-- CARD C -->
+        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3 hover:border-orange-200 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 font-bold text-xs flex items-center justify-center shrink-0">E</div>
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h5 class="text-xs font-bold text-[#0F172A]">Emre Ozturk</h5>
+              <div class="flex text-amber-400 text-[10px]">★ ★ ★ ★ ★</div>
+            </div>
+            <p class="text-[10px] text-gray-400 line-clamp-1">Top service en lekker flexibel!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CAROUSEL CONTROLS & PAGINATION DOTS -->
+      <div class="flex items-center justify-center gap-4">
+        <button class="w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-orange-500 hover:border-orange-500 flex items-center justify-center transition-all">
+          ←
+        </button>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+        </div>
+        <button class="w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-orange-500 hover:border-orange-500 flex items-center justify-center transition-all">
+          →
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* انيميشن الدوران حول المركز */
+  @keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes spinReverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+  /* منع الأيقونات من الانقلاب أثناء دوران المسار */
+  @keyframes counterRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+
+  .animate-spin-orbit {
+    animation: spinSlow 35s linear infinite;
+  }
+
+  .animate-spin-orbit-reverse {
+    animation: spinReverse 45s linear infinite;
+  }
+
+  .keep-upright {
+    animation: counterRotate 35s linear infinite;
+  }
+</style>
+
+<!-- SECTION: BUILT AROUND EVERY JOURNEY -->
+<section class="relative py-20 px-6 bg-[#F3F6F9] overflow-hidden min-h-[650px] flex flex-col justify-center items-center">
+
+  <!-- HEADER -->
+  <div class="text-center max-w-2xl mx-auto space-y-3 mb-8 relative z-20">
+    <div class="flex items-center justify-center gap-2 text-[11px] font-mono font-bold text-orange-500 tracking-[0.2em] uppercase">
+      <span class="w-4 h-[2px] bg-orange-500 inline-block"></span>
+      <span>VERTROUWD IN BEWEGING</span>
+    </div>
+
+    <h2 class="text-4xl sm:text-5xl font-black text-[#0F172A] tracking-tight">
+      Gebouwd rondom elke reis.
+    </h2>
+  </div>
+
+  <!-- INTERACTIVE MAP & ORBIT GRAPHIC CONTAINER -->
+  <div class="relative w-full max-w-5xl h-[450px] flex items-center justify-center">
+
+    <!-- 1. POLYGON MAP LAYER (SVG) -->
+    <svg class="absolute inset-0 w-full h-full z-0" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      
+      <!-- DASHED CONNECTING ROUTES -->
+      <path d="M 180 230 Q 300 160 500 250 T 800 240" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4" />
+      <path d="M 280 360 Q 420 400 500 250 T 780 430" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4" />
+
+      <!-- CONTINENT POLYGONS (HOVER EFFECTS: GRAY TO ORANGE) -->
+      <!-- North America Polygons -->
+      <g class="cursor-pointer transition-colors duration-300">
+        <polygon points="110,150 170,120 250,150 200,200 130,190" class="fill-[#CBD5E1] hover:fill-orange-500 transition-colors duration-300" />
+        <polygon points="120,200 190,200 240,270 170,310 130,260" class="fill-[#CBD5E1] hover:fill-orange-500 transition-colors duration-300" />
+        <polygon points="210,130 260,100 270,140 230,160" class="fill-[#E2E8F0] hover:fill-orange-400 transition-colors duration-300" />
+      </g>
+
+      <!-- South America Polygons -->
+      <g class="cursor-pointer transition-colors duration-300">
+        <polygon points="240,310 320,300 350,380 290,490 280,390" class="fill-[#CBD5E1] hover:fill-orange-500 transition-colors duration-300" />
+        <polygon points="280,490 290,490 330,420 280,390" class="fill-[#94A3B8] hover:fill-orange-600 transition-colors duration-300" />
+      </g>
+
+      <!-- Europe & Africa Polygons -->
+      <g class="cursor-pointer transition-colors duration-300">
+        <polygon points="430,210 470,190 510,210 490,260 450,250" class="fill-[#CBD5E1] hover:fill-orange-500 transition-colors duration-300" />
+        <polygon points="490,340 570,330 580,410 500,450" class="fill-[#E2E8F0] hover:fill-orange-400 transition-colors duration-300" />
+      </g>
+
+      <!-- Asia & Australia Polygons -->
+      <g class="cursor-pointer transition-colors duration-300">
+        <polygon points="680,210 800,200 840,280 710,300 670,250" class="fill-[#CBD5E1] hover:fill-orange-500 transition-colors duration-300" />
+        <polygon points="840,220 870,220 860,280 840,260" class="fill-[#E2E8F0] hover:fill-orange-400 transition-colors duration-300" />
+        <polygon points="730,380 860,390 880,480 750,470" class="fill-[#CBD5E1] hover:fill-orange-500 transition-colors duration-300" />
+      </g>
+
+      <!-- LOCATION PIN DOTS WITH ORANGE ACCENTS -->
+      <circle cx="180" cy="230" r="4" class="fill-orange-500" />
+      <circle cx="180" cy="230" r="8" class="stroke-orange-500" stroke-width="1.5" fill="none" opacity="0.6" />
+
+      <circle cx="270" cy="190" r="4" class="fill-orange-500" />
+
+      <circle cx="298" cy="360" r="4" class="fill-orange-500" />
+      <circle cx="298" cy="360" r="8" class="stroke-orange-500" stroke-width="1.5" fill="none" opacity="0.6" />
+
+      <circle cx="785" cy="225" r="4" class="fill-orange-500" />
+      <circle cx="815" cy="245" r="4" class="fill-orange-500" />
+      <circle cx="815" cy="245" r="8" class="stroke-orange-500" stroke-width="1.5" fill="none" opacity="0.6" />
+
+      <circle cx="748" cy="440" r="4" class="fill-orange-500" />
+      <circle cx="815" cy="420" r="4" class="fill-orange-500" />
+      <circle cx="815" cy="420" r="8" class="stroke-orange-500" stroke-width="1.5" fill="none" opacity="0.6" />
+    </svg>
+
+
+    <!-- 2. ROTATING ORBITAL RINGS & FLOATING ICONS -->
+
+    <!-- OUTER ORBIT CIRCLE -->
+    <div class="absolute w-[360px] h-[360px] rounded-full border border-dashed border-orange-300/60 pointer-events-none"></div>
+
+    <!-- INNER ORBIT CIRCLE -->
+    <div class="absolute w-[260px] h-[260px] rounded-full border border-dashed border-orange-300/40 pointer-events-none"></div>
+
+    <!-- ROTATING CONTAINER 1 (OUTER ORBIT) -->
+    <div class="absolute w-[360px] h-[360px] rounded-full animate-spin-orbit pointer-events-none">
+      
+      <!-- ICON 1: TRUCK (TOP) -->
+      <div class="absolute -top-5 left-1/2 -translate-x-1/2 pointer-events-auto">
+        <div class="keep-upright w-11 h-11 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center text-orange-500 hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 17a2 2 0 100 4 2 2 0 000-4ptm-3-4h11a1 1 0 001-1V7a1 1 0 00-1-1H4a1 1 0 00-1 1v8a1 1 0 001 1zm12 4a2 2 0 100-4 2 2 0 000-4zm1-8h-3V8h2a1 1 0 011 1v4z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ICON 2: GLOBE (BOTTOM) -->
+      <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 pointer-events-auto">
+        <div class="keep-upright w-11 h-11 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center text-orange-500 hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ROTATING CONTAINER 2 (INNER ORBIT REVERSE) -->
+    <div class="absolute w-[260px] h-[260px] rounded-full animate-spin-orbit-reverse pointer-events-none">
+      
+      <!-- ICON 3: PACKAGE (LEFT) -->
+      <div class="absolute -left-5 top-1/2 -translate-y-1/2 pointer-events-auto">
+        <div class="keep-upright w-11 h-11 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center text-orange-500 hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ICON 4: SHIELD CHECK (RIGHT) -->
+      <div class="absolute -right-5 top-1/2 -translate-y-1/2 pointer-events-auto">
+        <div class="keep-upright w-11 h-11 bg-white rounded-2xl shadow-md border border-gray-100 flex items-center justify-center text-orange-500 hover:scale-110 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- 3. CENTER BRAND LOGO BADGE -->
+    <div class="relative z-10 w-44 h-44 rounded-full bg-white/80 backdrop-blur-md p-3 shadow-2xl border border-white flex items-center justify-center">
+      <div class="w-full h-full rounded-full bg-white shadow-inner border border-gray-100 flex flex-col items-center justify-center p-4 text-center">
+        
+        <!-- LOGO ICON -->
+        <div class="flex items-center gap-1.5 mb-1">
+          <div class="space-y-1">
+            <span class="block w-4 h-0.5 bg-orange-500 rounded-full"></span>
+            <span class="block w-5 h-0.5 bg-orange-500 rounded-full"></span>
+            <span class="block w-3 h-0.5 bg-orange-500 rounded-full"></span>
+          </div>
+          <span class="text-xl font-black text-[#0F172A] tracking-wider">SETS</span>
+        </div>
+
+        <span class="text-[8px] font-mono font-bold text-gray-400 uppercase tracking-widest leading-tight">
+          EÉN VERBONDEN<br/>LOGISTIEK NETWERK
+        </span>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SECTION: FAQ / QUESTIONS ANSWERED -->
+<section id="faq" class="relative py-20 px-6 bg-[#F8FAFC] overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+      
+      <!-- LEFT COLUMN: TITLE & INTRO -->
+      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
+        
+        <!-- SUBTITLE -->
+        <div class="flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.2em] text-orange-500 uppercase">
+          <span class="w-4 h-[2px] bg-orange-500 inline-block"></span>
+          <span>GOED OM TE WETEN</span>
+        </div>
+
+        <!-- MAIN HEADING -->
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-[#0F172A] leading-[1.1] tracking-tight">
+          Vragen,<br/>
+          <span class="text-orange-500">beantwoord.</span>
+        </h2>
+
+        <!-- DESCRIPTION -->
+        <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+          Als u nog steeds hulp nodig heeft, staat ons team altijd klaar om u te woord te staan.
+        </p>
+
+        <!-- ASK US ANYTHING LINK -->
+        <div class="pt-2">
+          <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200">
+            <span>Stel ons een vraag</span>
+            <span class="text-base">→</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: ACCORDION LIST -->
+      <div class="lg:col-span-7 space-y-4">
+        
+        <!-- QUESTION 1 (OPEN BY DEFAULT) -->
+        <div class="faq-item bg-white rounded-2xl border-l-4 border-l-orange-500 border-y border-r border-gray-100 shadow-sm transition-all duration-300">
+          <button type="button" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#0F172A] text-sm sm:text-base focus:outline-none">
+            <span>Wat kan ons bedrijf transporteren?</span>
+            <span class="icon text-orange-500 text-lg transition-transform duration-300">×</span>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-gray-500 leading-relaxed">
+            Van gepalletiseerde vracht en volledige ladingen tot tijdsgevoelige zendingen, ons team plant de juiste weg-, lucht- of zee-oplossing voor uw lading.
+          </div>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-gray-200 transition-all duration-300">
+          <button type="button" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#0F172A] text-sm sm:text-base focus:outline-none">
+            <span>Hoe vraag ik een transportofferte aan?</span>
+            <span class="icon text-gray-400 text-lg transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 leading-relaxed">
+            U kunt eenvoudig een offerte aanvragen via ons online contactformulier of door direct telefonisch contact op te nemen met onze klantenservice.
+          </div>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-gray-200 transition-all duration-300">
+          <button type="button" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#0F172A] text-sm sm:text-base focus:outline-none">
+            <span>Kan ik mijn zending volgen?</span>
+            <span class="icon text-gray-400 text-lg transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 leading-relaxed">
+            Ja, zodra uw zending is ingepland ontvangt u een unieke trackingcode waarmee u de status van uw transport realtime kunt volgen.
+          </div>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-gray-200 transition-all duration-300">
+          <button type="button" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#0F172A] text-sm sm:text-base focus:outline-none">
+            <span>Verzorgen jullie ook internationaal transport?</span>
+            <span class="icon text-gray-400 text-lg transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 leading-relaxed">
+            Absoluut. Wij bieden wereldwijde logistieke oplossingen, inclusief douaneafhandeling en grensdocumentatie voor naadloos internationaal vervoer.
+          </div>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-gray-200 transition-all duration-300">
+          <button type="button" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#0F172A] text-sm sm:text-base focus:outline-none">
+            <span>Wat gebeurt er als mijn plannen wijzigen?</span>
+            <span class="icon text-gray-400 text-lg transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-500 leading-relaxed">
+            Geen probleem. Onze flexibele planningsservice maakt het mogelijk om route- of tijdswijzigingen snel en efficiënt door te voeren.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPT FOR ACCORDION TOGGLE -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const toggleBtn = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.icon');
+
+      toggleBtn.addEventListener('click', () => {
+        const isOpen = !content.classList.contains('hidden');
+
+        // Close all items
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('border-l-4', 'border-l-orange-500');
+          otherItem.classList.add('border');
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherIcon = otherItem.querySelector('.icon');
+          if (otherContent) otherContent.classList.add('hidden');
+          if (otherIcon) {
+            otherIcon.textContent = '+';
+            otherIcon.classList.remove('text-orange-500');
+            otherIcon.classList.add('text-gray-400');
+          }
+        });
+
+        // Toggle clicked item
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          item.classList.add('border-l-4', 'border-l-orange-500');
+          icon.textContent = '×';
+          icon.classList.remove('text-gray-400');
+          icon.classList.add('text-orange-500');
+        }
+      });
+    });
+  });
+</script>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-hoki-dark text-gray-400 py-16 px-6 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+      <div>
+        <div class="text-2xl font-black text-white mb-4">
+          HOKI<span class="text-hoki-orange">-LOGISTIEK</span>
+        </div>
+        <p class="text-sm leading-relaxed mb-4">
+          Uw betrouwbare logistieke partner in de Rotterdamse haven voor alle wereldwijde freight forwarding behoeften.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Sitemap</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Home</a></li>
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Over Ons</a></li>
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Diensten</a></li>
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Diensten</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Zeevracht</a></li>
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Luchtvracht</a></li>
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Warehousing</a></li>
+          <li><a href="#" class="hover:text-hoki-orange transition-colors">Douaneafhandeling</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Contact Rotterdam</h4>
+        <p class="text-sm leading-relaxed">
+          Haven Rotterdam, Sector 4<br>
+          3000 AB Rotterdam<br>
+          Nederland
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-gray-800 text-xs flex justify-between items-center">
+      <p>&copy; 2026 HOKI-LOGISTIEK. Alle rechten voorbehouden.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-white">Privacy Statement</a>
+        <a href="#" class="hover:text-white">Algemene Voorwaarden</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
